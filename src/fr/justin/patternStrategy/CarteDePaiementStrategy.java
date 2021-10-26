@@ -1,3 +1,5 @@
+package fr.justin.patternStrategy;
+
 public class CarteDePaiementStrategy implements PaiementStrategy {
     int numeroDeCarte;
     int cryptoGramme;

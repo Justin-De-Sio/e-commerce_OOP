@@ -1,3 +1,7 @@
+package fr.justin.patternStrategy;
+
+import fr.justin.pannier.Pannier;
+
 public class Commande {
     Pannier pannier;
     PaiementStrategy paiementStrategy;

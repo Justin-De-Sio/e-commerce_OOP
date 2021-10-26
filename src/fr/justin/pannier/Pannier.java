@@ -1,3 +1,5 @@
+package fr.justin.pannier;
+
 import java.util.ArrayList;
 
 public class Pannier {
@@ -5,15 +7,15 @@ public class Pannier {
 
     @Override
     public String toString() {
-        return "Pannier{" +
-                "pannier=" + pannier +
+        return "fr.justin.pannier.Pannier{" +
+                "fr.justin.pannier=" + pannier +
                 '}';
     }
 
     public Pannier(ArrayList<Article> pannier) {
         this.pannier = pannier;
     }
-    ArrayList<Article> getPannier(){
+    public ArrayList<Article> getPannier(){
         return pannier;
     }
     public void add(Article article){
@@ -23,7 +25,7 @@ public class Pannier {
         pannier.remove(article);
     }
 
-    int countSum(){
+    public int countSum(){
         int cpt=0;
         for (Article article: pannier){
             cpt+=article.getPrix();

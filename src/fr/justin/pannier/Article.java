@@ -1,4 +1,4 @@
-import java.util.Comparator;
+package fr.justin.pannier;
 
 public class Article  {
     String nom;
@@ -11,7 +11,7 @@ public class Article  {
 
     @Override
     public String toString() {
-        return "Article{" +
+        return "fr.justin.pannier.Article{" +
                 "nom='" + nom + '\'' +
                 ", prix='" + prix + '\'' +
                 '}';

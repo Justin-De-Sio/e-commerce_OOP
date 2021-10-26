@@ -1,3 +1,5 @@
+package fr.justin.pannier;
+
 import java.util.Comparator;
 
 public class ArticleComparator implements Comparator<Article> {

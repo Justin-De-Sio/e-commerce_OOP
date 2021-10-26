@@ -1,3 +1,5 @@
+package fr.justin.patternStrategy;
+
 public class PaypalStrategie implements PaiementStrategy {
     String id,mdp;
 
