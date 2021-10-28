@@ -7,12 +7,12 @@ public class Pc extends Article {
     public Pc(PcBuilder builder) {
         super(builder.nom, builder.prix);
         this.cpu = builder.cpu;
-        this.gpu=builder.gpu;
-        this.powerSupply=builder.powerSupply;
-        this.case1=builder.pcCase;
-        this.motherboard=builder.motherboard;
-        this.ram=builder.ram;
-        this.disk=builder.disk;
+        this.gpu = builder.gpu;
+        this.powerSupply = builder.powerSupply;
+        this.case1 = builder.pcCase;
+        this.motherboard = builder.motherboard;
+        this.ram = builder.ram;
+        this.disk = builder.disk;
         setTotalPrice();
     }
 
@@ -47,26 +47,32 @@ public class Pc extends Article {
             this.cpu = cpu;
             return this;
         }
+
         public PcBuilder addPowerSupply(Article powerSupply) {
             this.powerSupply = powerSupply;
             return this;
         }
+
         public PcBuilder addPcCase(Article pcCase) {
             this.pcCase = pcCase;
             return this;
         }
+
         public PcBuilder addMotherboard(Article motherboard) {
             this.motherboard = motherboard;
             return this;
         }
+
         public PcBuilder addRam(Article ram) {
             this.ram = ram;
             return this;
         }
-        public PcBuilder addDisk(Article disk){
-            this.disk=disk;
+
+        public PcBuilder addDisk(Article disk) {
+            this.disk = disk;
             return this;
         }
+
         public Pc build() {
             return new Pc(this);
         }

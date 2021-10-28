@@ -1,4 +1,4 @@
-package fr.justin.pannier;
+package fr.justin.article;
 
 import java.util.Comparator;
 

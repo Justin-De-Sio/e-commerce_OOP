@@ -1,7 +1,8 @@
 package fr.justin;
 
-import fr.justin.pannier.Article;
-import fr.justin.pannier.ArticleComparator;
+import fr.justin.article.Article;
+import fr.justin.article.ArticleComparator;
+import fr.justin.article.Pc;
 import fr.justin.pannier.Pannier;
 import fr.justin.patternObserver.MailAlertSubscriber;
 import fr.justin.patternObserver.PhoneAlrtSubscriber;
@@ -19,9 +20,10 @@ public class Client {
                 xm4 = new Article("sony XM4", 250),
                 ps4 = new Article("ps4", 350),
                 souris = new Article("souris logitech", 17);
-
+        Pc pc = new Pc.PcBuilder("pcCUSTOM", 0F).addGpu(new Article("gtx1080", 500)).addCpu(new Article("i5", 200)).addRam(new Article("Crucial 16Go ddr4", 100)).build();
         pannier.add(ps4);
         pannier.add(xm3);
+        pannier.add(pc);
 
         ps4.getPublisher().subscribe(new MailAlertSubscriber());
         xm3.getPublisher().subscribe(new PhoneAlrtSubscriber());
@@ -30,7 +32,6 @@ public class Client {
         PaypalStrategie paypalStrategie = new PaypalStrategie("exemple@live.fr", "motdepasse");
         Commande commande = new Commande(pannier, paypalStrategie);
 
-        System.out.println(pannier);
         pannier.getPannier().sort(new ArticleComparator());
         System.out.println(pannier);
 

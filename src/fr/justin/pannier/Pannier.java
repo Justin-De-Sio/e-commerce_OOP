@@ -1,5 +1,7 @@
 package fr.justin.pannier;
 
+import fr.justin.article.Article;
+
 import java.util.ArrayList;
 
 public class Pannier {
@@ -7,7 +9,7 @@ public class Pannier {
 
     @Override
     public String toString() {
-        return "pannier=" + pannier ;
+        return "pannier=" + pannier;
     }
 
     public Pannier(ArrayList<Article> pannier) {

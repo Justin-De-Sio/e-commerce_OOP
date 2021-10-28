@@ -1,4 +1,4 @@
-package fr.justin.pannier;
+package fr.justin.article;
 
 import fr.justin.patternObserver.Publisher;
 
@@ -12,7 +12,7 @@ public class Article {
 
     Publisher publisher;
 
-    public Article(String nom, int prix) {
+    public Article(String nom, float prix) {
         this.nom = nom;
         this.prix = prix;
         this.publisher = new Publisher();
@@ -20,7 +20,7 @@ public class Article {
 
     @Override
     public String toString() {
-        return nom+" : "+prix+'€';
+        return nom + " : " + prix + '€';
     }
 
 
@@ -32,7 +32,7 @@ public class Article {
         return nom;
     }
 
-    public void setPrix(int prix) {
+    public void setPrix(float prix) {
         this.prix = prix;
     }
 
