@@ -14,6 +14,6 @@ public class CarteDePaiementStrategy implements PaiementStrategy {
 
     @Override
     public void payer(int montant) {
-        System.out.println(montant+"€ payer en carte bleu");
+        System.out.println(montant + "€ payer en carte bleu");
     }
 }

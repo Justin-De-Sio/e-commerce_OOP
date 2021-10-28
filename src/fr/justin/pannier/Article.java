@@ -1,24 +1,30 @@
 package fr.justin.pannier;
 
-public class Article  {
+import fr.justin.patternObservator.Publisher;
+
+public class Article {
     String nom;
-    int prix;
+    float prix;
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    Publisher publisher;
 
     public Article(String nom, int prix) {
         this.nom = nom;
         this.prix = prix;
+        this.publisher = new Publisher();
     }
 
     @Override
     public String toString() {
-        return "fr.justin.pannier.Article{" +
-                "nom='" + nom + '\'' +
-                ", prix='" + prix + '\'' +
-                '}';
+        return nom+" : "+prix+'€';
     }
 
 
-    public int getPrix() {
+    public float getPrix() {
         return prix;
     }
 
@@ -26,5 +32,12 @@ public class Article  {
         return nom;
     }
 
+    public void setPrix(int prix) {
+        this.prix = prix;
+    }
 
+    public void promo(float promotion) {
+        this.prix = this.prix * (1 - (promotion / 100));
+        publisher.notifySubscriber(promotion, nom);
+    }
 }

@@ -5,6 +5,7 @@ import fr.justin.pannier.Pannier;
 public class Commande {
     Pannier pannier;
     PaiementStrategy paiementStrategy;
+
     public Commande(PaiementStrategy paiementStrategy) {
         this.paiementStrategy = paiementStrategy;
     }
@@ -14,7 +15,9 @@ public class Commande {
         this.paiementStrategy = paiementStrategy;
     }
 
-    public void terminerCommande() {
+    public void payOrder() {
         paiementStrategy.payer(pannier.countSum());
+        System.out.println("Order complet ! Thank you !");
+        pannier.getPannier().clear();
     }
 }

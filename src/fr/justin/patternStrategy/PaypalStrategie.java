@@ -1,7 +1,7 @@
 package fr.justin.patternStrategy;
 
 public class PaypalStrategie implements PaiementStrategy {
-    String id,mdp;
+    String id, mdp;
 
     public PaypalStrategie(String id, String mdp) {
         this.id = id;
@@ -10,6 +10,6 @@ public class PaypalStrategie implements PaiementStrategy {
 
     @Override
     public void payer(int montant) {
-        System.out.println(montant+"€ payé avec Paypal");
+        System.out.println(montant + "€ payé avec Paypal");
     }
 }
