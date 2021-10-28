@@ -1,4 +1,4 @@
-package fr.justin.patternObservator;
+package fr.justin.patternObserver;
 
 public class PhoneAlrtSubscriber implements Subscriber {
     @Override

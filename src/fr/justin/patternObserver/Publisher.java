@@ -1,4 +1,4 @@
-package fr.justin.patternObservator;
+package fr.justin.patternObserver;
 
 import java.util.ArrayList;
 import java.util.List;

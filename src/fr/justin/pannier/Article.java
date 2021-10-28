@@ -1,6 +1,6 @@
 package fr.justin.pannier;
 
-import fr.justin.patternObservator.Publisher;
+import fr.justin.patternObserver.Publisher;
 
 public class Article {
     String nom;

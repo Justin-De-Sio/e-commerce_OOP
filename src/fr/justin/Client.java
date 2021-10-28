@@ -3,8 +3,8 @@ package fr.justin;
 import fr.justin.pannier.Article;
 import fr.justin.pannier.ArticleComparator;
 import fr.justin.pannier.Pannier;
-import fr.justin.patternObservator.MailAlertSubscriber;
-import fr.justin.patternObservator.PhoneAlrtSubscriber;
+import fr.justin.patternObserver.MailAlertSubscriber;
+import fr.justin.patternObserver.PhoneAlrtSubscriber;
 import fr.justin.patternStrategy.Commande;
 import fr.justin.patternStrategy.PaypalStrategie;
 
