@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>fr.justin.patternStrategy</OriginalElement>
+  <nodes>
+    <node x="0.0" y="1013.0">fr.justin.patternStrategy.PaypalStrategie</node>
+    <node x="1432.1932870370372" y="162.5">fr.justin.patternObservator.PhoneAlrtSubscriber</node>
+    <node x="900.7974537037039" y="354.0">fr.justin.pannier.Article</node>
+    <node x="296.0" y="999.0">fr.justin.patternStrategy.CarteDePaiementStrategy</node>
+    <node x="1049.1886574074076" y="784.0">fr.justin.pannier.ArticleComparator</node>
+    <node x="854.1932870370372" y="120.0">fr.justin.patternObservator.Publisher</node>
+    <node x="918.6053240740744" y="0.0">fr.justin.patternObservator.Subscriber</node>
+    <node x="1175.1932870370372" y="162.5">fr.justin.patternObservator.MailAlertSubscriber</node>
+    <node x="640.0000000000001" y="999.0">fr.justin.patternStrategy.Commande</node>
+    <node x="184.0" y="814.5">fr.justin.patternStrategy.PaiementStrategy</node>
+    <node x="749.1886574074076" y="728.0">fr.justin.pannier.Pannier</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="fr.justin.patternObservator.PhoneAlrtSubscriber" target="fr.justin.patternObservator.Subscriber" relationship="REALIZATION">
+      <point x="-2.8703703719656914E-4" y="-49.5" />
+      <point x="1554.193" y="127.0" />
+      <point x="1439.0" y="127.0" />
+      <point x="1439.0" y="35.0" />
+      <point x="117.49967592592566" y="0.0" />
+    </edge>
+    <edge source="fr.justin.pannier.Article" target="fr.justin.patternObservator.Publisher" relationship="CREATE">
+      <point x="4.3958333333332575" y="-162.0" />
+      <point x="15.0" y="92.0" />
+    </edge>
+    <edge source="fr.justin.pannier.Article" target="fr.justin.patternObservator.Publisher" relationship="TO_ONE">
+      <point x="-10.604166666666742" y="-162.0" />
+      <point x="0.0" y="92.0" />
+    </edge>
+    <edge source="fr.justin.patternStrategy.Commande" target="fr.justin.pannier.Pannier" relationship="TO_ONE">
+      <point x="93.6886574074075" y="-92.0" />
+      <point x="15.0" y="105.5" />
+    </edge>
+    <edge source="fr.justin.patternStrategy.Commande" target="fr.justin.patternStrategy.PaiementStrategy" relationship="TO_ONE">
+      <point x="-78.8113425925925" y="-92.0" />
+      <point x="731.6886574074076" y="849.5" />
+      <point x="110.0" y="0.0" />
+    </edge>
+    <edge source="fr.justin.patternStrategy.Commande" target="fr.justin.pannier.Pannier" relationship="DEPENDENCY">
+      <point x="78.6886574074075" y="-92.0" />
+      <point x="0.0" y="105.5" />
+    </edge>
+    <edge source="fr.justin.patternStrategy.Commande" target="fr.justin.patternStrategy.PaiementStrategy" relationship="DEPENDENCY">
+      <point x="-93.8113425925925" y="-92.0" />
+      <point x="716.6886574074076" y="864.5" />
+      <point x="110.0" y="15.0" />
+    </edge>
+    <edge source="fr.justin.pannier.Pannier" target="fr.justin.pannier.Article" relationship="DEPENDENCY">
+      <point x="3.425925923465911E-4" y="-105.5" />
+      <point x="889.189" y="703.0" />
+      <point x="1015.297" y="703.0" />
+      <point x="-4.537037038971903E-4" y="162.0" />
+    </edge>
+    <edge source="fr.justin.patternObservator.Publisher" target="fr.justin.patternObservator.Subscriber" relationship="DEPENDENCY">
+      <point x="31.41203703703718" y="-92.0" />
+      <point x="0.0" y="35.0" />
+    </edge>
+    <edge source="fr.justin.patternStrategy.CarteDePaiementStrategy" target="fr.justin.patternStrategy.PaiementStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-92.0" />
+      <point x="458.0" y="934.0" />
+      <point x="293.9997129629627" y="934.0" />
+      <point x="-2.87037037310256E-4" y="35.0" />
+    </edge>
+    <edge source="fr.justin.patternStrategy.PaypalStrategie" target="fr.justin.patternStrategy.PaiementStrategy" relationship="REALIZATION">
+      <point x="0.0" y="-78.0" />
+      <point x="138.0" y="934.0" />
+      <point x="293.9997129629627" y="934.0" />
+      <point x="-2.87037037310256E-4" y="35.0" />
+    </edge>
+    <edge source="fr.justin.pannier.ArticleComparator" target="fr.justin.pannier.Article" relationship="DEPENDENCY">
+      <point x="3.4259259246027796E-4" y="-49.5" />
+      <point x="1174.689" y="703.0" />
+      <point x="1015.297" y="703.0" />
+      <point x="-4.537037038971903E-4" y="162.0" />
+    </edge>
+    <edge source="fr.justin.patternObservator.MailAlertSubscriber" target="fr.justin.patternObservator.Subscriber" relationship="REALIZATION">
+      <point x="-2.8703703719656914E-4" y="-49.5" />
+      <point x="1293.693" y="127.0" />
+      <point x="1439.0" y="127.0" />
+      <point x="1439.0" y="35.0" />
+      <point x="117.49967592592566" y="0.0" />
+    </edge>
+    <edge source="fr.justin.pannier.Pannier" target="fr.justin.pannier.Article" relationship="TO_MANY">
+      <point x="-14.999657407407653" y="-105.5" />
+      <point x="874.189" y="516.0" />
+      <point x="-114.5" y="0.0" />
+    </edge>
+    <edge source="fr.justin.patternObservator.Publisher" target="fr.justin.patternObservator.Subscriber" relationship="TO_MANY">
+      <point x="46.41203703703718" y="-92.0" />
+      <point x="15.0" y="35.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="838.5" y="591.5" />
+  <SelectedNodes>
+    <node>fr.justin.patternStrategy.PaiementStrategy</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>protected</VISIBILITY>
+</Diagram>
+
